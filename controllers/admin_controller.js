@@ -53,8 +53,8 @@ module.exports.addProduct = async(req, res) => {
         });
     
         await product.save()
-        const folderPath = 'public/images/products';
-        await fs.emptyDir(folderPath);
+        // const folderPath = 'public/images/products';
+        // await fs.emptyDir(folderPath);
         req.flash('success','product Added'); 
         return res.redirect('back')
     }catch(err){
